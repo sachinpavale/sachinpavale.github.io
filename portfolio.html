@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #banner-container {
+      position: relative;
+      width: 100%;max-width: 1200px; /* Adjust the width as needed */
+      overflow: hidden;
+      margin: auto; 
+    }
+
+    #image-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .banner-image {
+      width: 100%;height: auto;
+    }
+
+    #left-arrow, #right-arrow {
+      position: absolute;
+      top: 50%;transform: translateY(-50%);/* align in center */
+      background-color: rgba(0, 0, 0, 0.2);
+      padding:0px 12px;
+      font-size: 30px;color: #fff;
+      cursor: pointer;
+      border: none;outline: none;
+    }
+
+    #left-arrow { left: 10px; } /* place left */
+    #right-arrow { right: 10px; } /* place right */
+
+    /* media query */
+    @media (max-width:768px){
+    #image-container{
+      display: flex;justify-content: center;flex-direction: row;flex-wrap: wrap;}
+      .banner-image{margin: 5px;}
+      #left-arrow, #right-arrow {display: none;}
+    }
+  </style>
+  <title>Sachin Pavale|#Graphic Designer|Portfolio</title>
+  <!--using favicon in title bar-->
+  <link rel="icon" href="images/sachin.png" type="image/png" size="16x16">
+</head>
+<body style="background: black;">
+
+<div id="banner-container">
+  <div id="image-container">
+    <!-- Add your image sources here -->
+    <img class="banner-image" src="images/portfolio-images/07.clipping mask_.jpg" alt="Image 1">
+    <img class="banner-image" src="images/portfolio-images/10.powedder blas.jpg" alt="Image 2">
+    <img class="banner-image" src="images/portfolio-images/20.tipsto master typography.jpg" alt="Image 3">
+    <img class="banner-image" src="images/portfolio-images/24.food banner.jpg" alt="Image 4">
+    <img class="banner-image" src="images/portfolio-images/33.jbl flip6.jpg" alt="Image 5">
+    <img class="banner-image" src="images/portfolio-images/fresh pick.jpg" alt="Image 6">
+    <img class="banner-image" src="images/portfolio-images/luxeaura.jpg" alt="Image 7">
+    <img class="banner-image" src="images/portfolio-images/a.bramha sm post.jpg" alt="Image 8">
+    <img class="banner-image" src="images/portfolio-images/a.diganc sm post.jpg" alt="Image 9">
+    <img class="banner-image" src="images/portfolio-images/a.noise watch sm post.jpg" alt="Image 10">
+    <img class="banner-image" src="images/portfolio-images/a.sport gym.jpg" alt="Image 11">
+    <img class="banner-image" src="images/portfolio-images/a.bhoomi.jpg" alt="Image 12">
+    <img class="banner-image" src="images/portfolio-images/a.deal grow.jpg" alt="Image 13">
+    <img class="banner-image" src="images/portfolio-images/resume.jpg" alt="Image 21">
+    <img class="banner-image" src="images/portfolio-images/a.aptitude.jpg" alt="Image 14">
+    <img class="banner-image" src="images/portfolio-images/a.fantesy event.jpg" alt="Image 15">
+    <img class="banner-image" src="images/portfolio-images/a.meyer.jpg" alt="Image 16">
+    <img class="banner-image" src="images/portfolio-images/letterhead.jpg" alt="Image 19">
+    <img class="banner-image" src="images/portfolio-images/menu card.jpg" alt="Image 20">
+    <img class="banner-image" src="images/portfolio-images/a.cirtificate.jpg" alt="Image 21">
+    <img class="banner-image" src="images/portfolio-images/a.business card.jpg" alt="Image 18">
+    <!-- Repeat for all ten images -->
+  </div>
+  <button id="left-arrow">&larr;</button>
+  <button id="right-arrow">&rarr;</button>
+</div>
+
+<script>
+  const imageContainer = document.getElementById('image-container');
+  const leftArrow = document.getElementById('left-arrow');
+  const rightArrow = document.getElementById('right-arrow');
+
+  let currentIndex = 0;
+
+  leftArrow.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateBanner();
+    }
+  });
+
+  rightArrow.addEventListener('click', () => {
+    if (currentIndex < 20) {
+      currentIndex++;
+      updateBanner();
+    }
+  });
+
+  function updateBanner() {
+    const newTransformValue = `translateX(-${currentIndex * 100}%)`;
+    imageContainer.style.transform = newTransformValue;
+  }
+</script>
+
+</body>
+</html>
