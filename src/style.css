@@ -9,7 +9,7 @@ section{padding: 100px 150px;margin-top: 0px;}
 /*animated_text div css*/
 .animated_text{position: relative;height: 70px;overflow: hidden;}
 /*animated_text div content css*/
-.animated_text h3{color: #b98d14;font-size: 3em;font-weight: 500;line-height: 70px;letter-spacing: 1px;}
+.animated_text h3{color: #f4cf3a;font-size: 3em;font-weight: 500;line-height: 70px;letter-spacing: 1px;text-shadow: 0 3px 0px rgba(1 1 1 / 80%)}
 /*animated_text div content animation css*/
 .animated_text h3:nth-child(1){animation: text_line_move 10s infinite ;}
 @keyframes text_line_move{0%{margin-top: 0;}25%{margin-top: -70px;}50%{margin-top: -140px;}75%{margin-top: -70px;}100%{margin-top: 0;}}
@@ -30,9 +30,9 @@ body{min-height: 110vh;}
 
 /*section title css*/
 .title{width: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;}
-.section_title{position: relative;color: #b98d14;font-size: 2.2em;font-weight: 700;margin-bottom: 30px;}
-.section_title:before{content: '';position: absolute;top: 56px;left: 50%;width: 90%;height: 4px;background:#b98d14 ;transform: translateX(-50%);}
-.section_title:after{content: '';position: absolute;top: 50px;left: 50%;width: 15px;height: 15px;border-radius: 50px; background:#b98d14 ;transform: translateX(-50%);}
+.section_title{position: relative;color: #f4cf3a;font-size: 2.2em;font-weight: 700;margin-bottom: 30px;text-shadow: 0 3px 0px rgba(1 1 1 / 80%);}
+.section_title:before{content: '';position: absolute;top: 56px;left: 50%;width: 90%;height: 4px;background:#f4cf3a ;transform: translateX(-50%);box-shadow: 0 2px 0px rgba(1 1 1 / 80%)}
+.section_title:after{content: '';position: absolute;top: 50px;left: 50%;width: 15px;height: 15px;border-radius: 50px; background:#f4cf3a ;transform: translateX(-50%);box-shadow: 0 2px 0px rgba(1 1 1 / 80%)}
 /*about section css*/
 .about{background: #ebebeb;}
 .about .content{position: relative;width: 100%;display: flex;justify-content: space-between;margin-top: 20px;}
@@ -106,7 +106,7 @@ body{min-height: 110vh;}
 /* footer section css*/
 .footer{background: #000000;color: #fff;text-align: center;padding: 2em;}
 .footer .footer_title{font-size: 20px;font-weight: 600;}
-.footer p{font-size: 1em;font-weight: 200; margin-top: 10px;color:#b98d14}
+.footer p{font-size: 1em;font-weight: 200; margin-top: 10px;color:#f4cf3a}
 
 
   /* jump button css*/

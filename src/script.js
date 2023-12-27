@@ -62,6 +62,6 @@ btn.addEventListener('click',()=>{
         Subject : inputs.elements['subject'].value,
         Body : inputs.elements['message'].value + "<br>" + "Regards, "  +inputs.elements['name'].value + "<br>" +" Ph no: " +inputs.elements['phone'].value,
     }).then(
-      message => alert("The inquiry is currently closed due to a page update.")
+      message => alert("The inquiry is currently closed due to a page update. Please contact me via WhatsApp, Instagram, or email.")
     )
 })
